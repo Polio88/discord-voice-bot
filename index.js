@@ -46,7 +46,7 @@ const client = new Client({
 });
 
 // ====== Configura aquí tu archivo de audio ======
-const AUDIO_FILE = "C:\Users\pmmpo\AppData\Local\CapCut\Videos\Templario.MP3";
+const AUDIO_FILE = path.join(__dirname, "Templario.mp3")
 
 // ====== Estado ======
 let loopActive = false;
