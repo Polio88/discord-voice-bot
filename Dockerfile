@@ -1,12 +1,9 @@
 
-FROM node:18-alpine
 
-# Instala herramientas para compilar dependencias nativas
-RUN apk add --no-cache \
-    python3 \
-    make \
-    g++ \
-    ffmpeg
+FROM node:18
+
+# Instala ffmpeg y herramientas básicas
+RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
